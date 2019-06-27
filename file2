@@ -1,0 +1,19 @@
+kind: Pod
+apiVersion: v1
+metadata: 
+  name: mysql
+spec: 
+  volumes: 
+  - name: data
+    persitentVolumeClaim:
+      claimName: my.mysql.claim
+  containers:
+  - image: mysql:5.6
+    name: mysql
+env: 
+- name: MYSQL_ROOT_PASSWORD
+  value: opensesame
+volumeMounts:
+- name: data
+  mountPath: /var/lib/mysql
+  
