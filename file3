@@ -1,0 +1,10 @@
+kind: PersitentVolumeClaim
+apiVersion: v1
+matadata: 
+  name: my.mysql.claim
+spec: 
+  resources: 
+    requests:
+      storage: 1Gi
+  accessModes:
+  - ReadWriteOnce  
