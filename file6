@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: PersitentVolume
+metadata:
+  name: pv1
+spec: 
+  capacity:
+    storage: 2Gi
+  AccessModes: 
+    -ReadWriteMany
+    -ReadWriteOnce
+    -ReadOnlyMany
+  storageClassName: cheap
+  persitentVolumeReclaimPolicy: Reatain
+  nfs:
+    Server: 192.168.121.1
+    path: "/vol/share-1"
+   
