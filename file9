@@ -1,0 +1,2 @@
+$ kubectl create -f pod.yaml 
+pod/mysql created
