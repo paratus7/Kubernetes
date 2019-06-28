@@ -1,0 +1,3 @@
+$ kubectl get pvc 
+NAME              STATUS 
+my.delayed.claim  Bound
